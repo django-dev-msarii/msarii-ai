@@ -1,444 +1,1288 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Msarii.AI</title>
-  <meta name="description" content="منصة ذكاء اصطناعي بالعربية">
-  <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Msarii.AI</title>
+    <meta name="description" content="منصة ذكاء اصطناعي بالعربية" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      body { font-family: 'Tajawal', sans-serif; }
-      h1,h2,h3,h4,h5,h6 { font-family: 'Tajawal', sans-serif; font-weight: 700; }
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Tajawal", sans-serif;
+        font-weight: 700;
+      }
     </style>
-  <style>
-  /* FIRST: Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Cairo:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    <style>
+      /* FIRST: Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Cairo:wght@400;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Montserrat:wght@700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* THEN: Tailwind */
-@import "tailwindcss";
+      /* THEN: Tailwind */
+      @import "tailwindcss";
 
-/* THEN: custom @font-face and styles */
-@font-face {
-  font-family: 'Dubai';
-  src: url('/fonts/alfont_com_Dubai-Regular.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+      /* THEN: custom @font-face and styles */
+      @font-face {
+        font-family: "Dubai";
+        src: url("/fonts/alfont_com_Dubai-Regular.otf") format("opentype");
+        font-weight: normal;
+        font-style: normal;
+      }
 
-:root {
-  --font-dubai: 'Dubai', Arial, Helvetica, sans-serif;
-  --font-amiri: 'Amiri', serif;
-  --font-tajawal: 'Tajawal', sans-serif;
-  --font-cairo: 'Cairo', sans-serif;
-  --font-kufi: 'Noto Kufi Arabic', sans-serif;
-  --font-inter: 'Inter', sans-serif;
+      :root {
+        --font-dubai: "Dubai", Arial, Helvetica, sans-serif;
+        --font-amiri: "Amiri", serif;
+        --font-tajawal: "Tajawal", sans-serif;
+        --font-cairo: "Cairo", sans-serif;
+        --font-kufi: "Noto Kufi Arabic", sans-serif;
+        --font-inter: "Inter", sans-serif;
 
-  --background: #ffffff;
-  --foreground: #171717;
-}
+        --background: #ffffff;
+        --foreground: #171717;
+      }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-tajawal);
-}
+      body {
+        background: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-tajawal);
+      }
 
-.font-dubai {
-  font-family: var(--font-dubai);
-}
-.font-amiri {
-  font-family: var(--font-amiri);
-}
-.font-cairo {
-  font-family: var(--font-cairo);
-}
-.font-kufi {
-  font-family: var(--font-kufi);
-}
-
-  </style>
-</head>
-<body class="font-[calibri] bg-white text-gray-900">
-  <!-- Navbar -->
-  <nav class="w-full py-4 px-6 flex justify-around items-center text-sm border-b bg-white" dir="rtl" id="top">
-    <div class="flex items-center gap-2">
-      <img src="./assets/msariiLogo.png" alt="شعار" class="h-10 w-auto" />
-    </div>
-    <div class="hidden md:flex gap-8 text-gray-700 font-medium text-xl">
-      <a href="#top" class="text-blue-600 border-b-2 border-blue-600 pb-1 font-tajawal">الصفحة الرئيسية</a>
-      <a href="#services" class="hover:underline text-xl font-normal font-tajawal">الخدمات</a>
-      <a href="#process" class="hover:underline text-xl font-normal font-tajawal">عملية عملنا</a>
-      <a href="#contact" class="hover:underline text-xl font-normal font-tajawal">اتصل بنا</a>
-    </div>
-  </nav>
-
-  <!-- BannerHero -->
-  <section class="w-full text-white relative overflow-hidden" style="background-image:url('./assets/Rectangle 5235.png');background-size:cover;background-position:center;background-repeat:no-repeat;min-height:600px">
-    <div class="absolute inset-0 bg-black/30"></div>
-    <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-end py-20 px-6">
-      <div class="space-y-4 self-center">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight">نصنع حلولاً ذكية باللغة العربية</h1>
-        <p class="text-lg text-gray-100">منصة Msarii.AI تقدم خدمات وتقنيات الذكاء الاصطناعي والتطوير السحابي والتجارب الرقمية.</p>
-      </div>
-      <div class="flex items-end justify-center h-full">
-        <img src="./assets/ChatGPT_Image.png" alt="Msarii Hero" class="object-contain h-[500px] md:h-[600px] w-auto" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="bg-[#F3F6FD] py-16 px-6">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">خدماتنا</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/brain.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">خدمات سحابية قابلة للتطوير</h3>
-        <p class="text-gray-600 leading-relaxed">خدمات سحابية قابلة للتطوير وآمنة توفر حلول التخزين والحوسبة والنسخ الاحتياطي والنشر السريع نمو الأعمال والتحول الرقمي بسهولة.</p>
-      </div>
-    </div>
-    
-
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/Ai.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">الذكاء الاصطناعي</h3>
-        <p class="text-gray-600 leading-relaxed">نحن نقدم حلول الذكاء الاصطناعي المتطورة التي تعمل على أتمتة العمليات وتعزيز عملية اتخاذ القرار وتحسين الكفاءة ودفع الابتكار عبر قطاعات الأعمال المتنوعة.</p>
-      </div>
-    </div>
-    
-
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/database.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">تصميم الموقع</h3>
-        <p class="text-gray-600 leading-relaxed">تصميم موقع ويب حديث ومتجاوب يسلط الضوء على علامتك التجارية ويحسن تجربة المستخدم ويعزز المشاركة ويحول الزوار إلى عملاء.</p>
-      </div>
-    </div>
-    
-
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/responsive.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">الأتمتة AI</h3>
-        <p class="text-gray-600 leading-relaxed">حلول أتمتة الذكاء الاصطناعي التي تعمل على تسريع سير العمل وتقليل الجهود اليدوية وتعزيز الدقة وزيادة الإنتاجية ودفع عملية اتخاذ القرارات الذكية عبر العمليات التجارية.</p>
-      </div>
-    </div>
-    
-
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/robot.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">تصميم UI/UX</h3>
-        <p class="text-gray-600 leading-relaxed">خدمات تصميم واجهة المستخدم/تجربة المستخدم الإبداعية التي توفر واجهات جذابة ومركزة على المستخدم والتي تعمل على تحسين قابلية الاستخدام وتعزيز الاتساق بالمعلومات ورفع مستوى التجربة الرقمية بسلاسة.</p>
-      </div>
-    </div>
-    
-
-    <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
-      <img src="./assets/ux-design.gif" alt="" class="w-14 h-14 rounded-full flex-shrink-0" loading="lazy" />
-      <div class="space-y-2">
-        <h3 class="text-xl font-semibold text-gray-900">والأتمتة DevOps</h3>
-        <p class="text-gray-600 leading-relaxed">خدمات DevOps والأتمتة المبسطة لدمج التطوير والعمليات CI/CD وتعزيز التعاون وتقليل الأخطاء وتعزيز الكفاءة التشغيلية وقابلية التوسع.</p>
-      </div>
-    </div>
-    
-      </div>
-    </div>
-  </section>
-
-  <!-- CEO -->
-  <section class="bg-white py-20 px-4">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-12">
-      <div class="flex-shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg">
-        <img src="./assets/girl3DImage.png" alt="جاسم الدرمكي" class="w-full h-full object-cover" loading="lazy" />
-      </div>
-      <div class="text-center md:text-right flex-1 font-dubai">
-        <h2 class="text-2xl md:text-3xl font-bold text-[#002a6d] leading-relaxed mb-4">تقدم <span class="text-[#002a6d] font-extrabold">Msarii.ai</span> حلولاً عالية الجودة<br />باستخدام أحدث التقنيات.</h2>
-        <div class="mt-6">
-          <p class="text-lg font-bold text-[#002a6d]">جاسم الدرمكي</p>
-          <p class="text-sm text-[#002a6d]">CEO</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Alternating Sections (عملية عملنا) -->
-  
-  
-  <section id="process" class="bg-[#EAF1FF] py-12 sm:py-16 px-4 sm:px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-8 md:mb-12 text-[#0B469A]">عملية عملنا</h2>
-      <div class="space-y-2 md:space-y-6">
-        <div class="py-6 md:py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-      <div class="flex md:justify-start">
-        <div class="bg-white/100 shadow-lg rounded-2xl p-6 sm:p-7 md:max-w-xl w-full">
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0B469A] mb-2">تحليل المتطلبات</h3>
-          <p class="text-gray-700 leading-8">في هذه المرحلة الأولية، نتعاون بشكل وثيق مع عملائنا لفهم أهداف أعمالهم، والمستخدمين المستهدفين، ونطاق المشروع. نجمع ونوثق المتطلبات التفصيلية من خلال الاجتماعات والاستبيانات والأبحاث. تُضمن هذه الخطوة التوافق، وتكشف التحديات المحتملة مبكرًا، وتضع أساسًا واضحًا للتصميم والتطوير وإنجاز المشروع بنجاح.</p>
-        </div>
-      </div>
-    
-          
-      <div class="relative">
-        <img src="./assets/Rectangle 5247.png" alt="تحليل المتطلبات"
-             class="w-full h-auto rounded-2xl shadow-2xl object-cover" loading="lazy" />
-      </div>
-    
-        </div>
-        </div><div class="py-6 md:py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-      <div class="relative">
-        <img src="./assets/Rectangle 5248.png" alt="تصميم UI/UX"
-             class="w-full h-auto rounded-2xl shadow-2xl object-cover" loading="lazy" />
-      </div>
-    
-          
-      <div class="flex md:justify-end">
-        <div class="bg-white/100 shadow-lg rounded-2xl p-6 sm:p-7 md:max-w-xl w-full">
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0B469A] mb-2">تصميم UI/UX</h3>
-          <p class="text-gray-700 leading-8">نقوم بتصميم واجهة مستخدم وتجربة مستخدم سهلة الاستخدام وجذابة بصريًا. نركز على الاتساق بالمعلومات ورفع مستوى التجربة الرقمية بسلاسة.</p>
-        </div>
-      </div>
-    
-        </div>
-        </div><div class="py-6 md:py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-      <div class="relative">
-        <img src="./assets/Rectangle 5246.png" alt="تطوير"
-             class="w-full h-auto rounded-2xl shadow-2xl object-cover" loading="lazy" />
-      </div>
-    
-          
-      <div class="flex md:justify-end">
-        <div class="bg-white/100 shadow-lg rounded-2xl p-6 sm:p-7 md:max-w-xl w-full">
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0B469A] mb-2">تطوير</h3>
-          <p class="text-gray-700 leading-8">يحول فريق التطوير لدينا التصاميم المعتمدة إلى حلول عملية وعالية الأداء باستخدام أحدث التقنيات. نتبع منهجيات مرنة، تضمن من خلالها التقدم التكراري، والتغذية الراجعة المنتظمة، والمرونة. نكتب الشيفرة البرمجية ونختبر ونُدمج مع أنظمة الواجهة الخلفية بأمان وكفاءة، مما ينتج عنه منتجات قابلة للتطوير والصيانة، تتماشى مع أهداف أعمالكم ومتطلباتكم التقنية.</p>
-        </div>
-      </div>
-    
-        </div>
-        </div><div class="py-6 md:py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          
-      <div class="flex md:justify-start">
-        <div class="bg-white/100 shadow-lg rounded-2xl p-6 sm:p-7 md:max-w-xl w-full">
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0B469A] mb-2">النشر</h3>
-          <p class="text-gray-700 leading-8">في مرحلة النشر، نُجهّز المنتج النهائي للإطلاق من خلال تهيئة الخوادم، وتحسين الأداء، وإجراء فحوصات ضمان الجودة النهائية. نضمن سلاسة الطرح في بيئات الإنتاج مع أقل فترات توقف. بعد النشر، نراقب النظام عن كثب، ونعالج أي مشاكل فورًا لضمان تجربة مستخدم سلسة.</p>
-        </div>
-      </div>
-    
-          
-      <div class="relative">
-        <img src="./assets/Rectangle 5249.png" alt="النشر"
-             class="w-full h-auto rounded-2xl shadow-2xl object-cover" loading="lazy" />
-      </div>
-    
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Hero Carousel (حلولنا التقنية / مشاريعنا) -->
-  
-  <section class="bg-white py-16">
-    <div class="max-w-6xl mx-auto">
-      <div class="relative overflow-hidden">
-        <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
-          
-      <div class="shrink-0 w-full grid md:grid-cols-2 gap-8 items-center px-6">
-        <div class="text-center md:text-right">
-          <h3 class="text-3xl font-bold text-[#003B95] mb-2">مشاريعنا</h3>
-          <p class="text-gray-700 text-lg">أفضل مطوري مواقع الويب تصميمات حصرية</p>
-        </div>
-        <div class="flex justify-center">
-          <img src="./assets/destop.png" alt="مشاريعنا" class="max-h-72 w-auto rounded-2xl shadow-md" loading="lazy">
-        </div>
-      </div>
-    
-      <div class="shrink-0 w-full grid md:grid-cols-2 gap-8 items-center px-6">
-        <div class="text-center md:text-right">
-          <h3 class="text-3xl font-bold text-[#003B95] mb-2">حلولنا التقنية</h3>
-          <p class="text-gray-700 text-lg">تصميمات مبتكرة لمستقبل رقمي</p>
-        </div>
-        <div class="flex justify-center">
-          <img src="./assets/Lurnify.png" alt="حلولنا التقنية" class="max-h-72 w-auto rounded-2xl shadow-md" loading="lazy">
-        </div>
-      </div>
-    
-        </div>
-        <div class="flex gap-2 justify-center mt-4">
-          <button class="w-8 h-8 rounded-full border" onclick="carouselPrev()" aria-label="prev">‹</button>
-          <button class="w-8 h-8 rounded-full border" onclick="carouselNext()" aria-label="next">›</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script>
-    let slideIndex = 0;
-    const totalSlides = 2;
-    function updateCarousel() { 
-      const track = document.getElementById('carouselTrack'); 
-      if (!track) return; 
-      track.style.transform = `translateX(-${slideIndex * 100}%)`; 
-    }
-    function carouselNext() { slideIndex = (slideIndex + 1) % totalSlides; updateCarousel(); }
-    function carouselPrev() { slideIndex = (slideIndex - 1 + totalSlides) % totalSlides; updateCarousel(); }
-  </script>
-
-
-  <!-- Testimonials -->
-  <section class="w-full bg-white text-gray-800 py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">آراء العملاء</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        
-          <div class="bg-white rounded-2xl shadow p-6">
-            <div class="text-yellow-500 text-lg" aria-label="5 نجوم">★★★★★</div>
-            <p class="text-gray-700 mt-3">أحدث تطبيق الويب أورة في سير التطوير قمنا به من خلال تقديم تصميمات رائعة والميزات البديهية المصممة لتلبية احتياجاتنا.</p>
-            <div class="mt-4 font-medium text-gray-900">صوفيا</div>
-            <div class="text-gray-500 text-sm">مدرب</div>
-          </div>
-        
-
-          <div class="bg-white rounded-2xl shadow p-6">
-            <div class="text-yellow-500 text-lg" aria-label="5 نجوم">★★★★★</div>
-            <p class="text-gray-700 mt-3">لقد دهشت من الواجهة البديهية والتنقل السلس للمنصة.</p>
-            <div class="mt-4 font-medium text-gray-900">عليا روي</div>
-            <div class="text-gray-500 text-sm">خالق وسائل التواصل الاجتماعي</div>
-          </div>
-        
-
-          <div class="bg-white rounded-2xl shadow p-6">
-            <div class="text-yellow-500 text-lg" aria-label="4 نجوم">★★★★</div>
-            <p class="text-gray-700 mt-3">فريق تطوير المكاسب الكاملة المكونات الأمامية والخلفية الخدمية بسلاسة.</p>
-            <div class="mt-4 font-medium text-gray-900">محمد علي</div>
-            <div class="text-gray-500 text-sm">المؤسس والمعلم</div>
-          </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  
-  <section id="contact" class="bg-[#F3F6FD] py-12 px-4">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto">
-      <div class="flex flex-col items-center text-right">
-        <p class="text-sm text-gray-700 font-semibold mb-1 font-kufi">!24/7 نحن متاحون لك</p>
-        <h3 class="text-xl font-bold text-[#003B95] mb-4 font-kufi">اتصل بنا</h3>
-        <img src="./assets/girl3DImage.png" alt="Support" class="w-full max-w-sm object-cover rounded-3xl" />
-      </div>
-      <div class="w-full max-w-xl bg-cover bg-center rounded-2xl shadow-xl px-6 py-8 sm:p-10" style="background-image:url('./assets/Rectangle 5235.png')">
-        <h2 class="text-white text-3xl font-extrabold mb-2 text-center">أرسل استفسارك</h2>
-        <p class="text-gray-200 text-center mb-6">سوف يسعدنا مساعدتك</p>
-        <form onsubmit="return submitContact(event)" class="space-y-4 text-white text-sm font-medium">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input type="text" placeholder="اسمك" required class="bg-transparent border border-white text-white placeholder-white px-4 py-2 rounded-md" />
-            <input type="email" placeholder="بريدك الإلكتروني" required class="bg-transparent border border-white text-white placeholder-white px-4 py-2 rounded-md" />
-            <input type="text" placeholder="موضوع" class="bg-transparent border border-white text-white placeholder-white px-4 py-2 rounded-md" />
-            <input type="text" placeholder="هاتف" class="bg-transparent border border-white text-white placeholder-white px-4 py-2 rounded-md" />
-          </div>
-          <textarea placeholder="رسالة" class="bg-transparent border border-white text-white placeholder-white px-4 py-2 rounded-md min-h-[120px]"></textarea>
-          <div class="flex items-center gap-2">
-            <input type="checkbox" required />
-            <label class="text-white text-sm">أوافق على الشروط</label>
-          </div>
-          <button type="submit" class="w-full bg-white text-[#003B95] font-bold py-2 rounded-lg hover:bg-gray-100 transition">تقدم</button>
-        </form>
-        <div class="mt-6 pt-4 border-t border-white flex flex-col sm:flex-row justify-between items-center text-white text-sm gap-3">
-          <div class="flex items-center gap-2">✉️ support@msarii.ai</div>
-          <div class="flex items-center gap-2">📞 +971 52 352 36 72</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  
-  <footer class="bg-[#F3F6FD] pt-12 pb-6 px-6">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-right">
-      <div>
-        <h4 class="font-bold mb-3">إبقى على اتصال</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="#" class="hover:underline">الدعم والمساعدة</a></li>
-          <li><a href="#" class="hover:underline">الأسئلة الشائعة والدعم</a></li>
-          <li><a href="#" class="hover:underline">دعم العملاء</a></li>
-          <li><a href="#" class="hover:underline">ردود الفعل والاقتراحات</a></li>
-          <li><a href="#" class="hover:underline">احصل على المساعدة</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3">إبقَ على اطلاع</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="#" class="hover:underline">اشترك في النشرة الإخبارية</a></li>
-          <li><a href="#" class="hover:underline">اتبع رحلتنا</a></li>
-          <li><a href="#" class="hover:underline">تعرف على المزيد هنا</a></li>
-          <li><a href="#" class="hover:underline">انضم إلى فريقنا</a></li>
-          <li><a href="#" class="hover:underline">تواصل معنا</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3">تواصل على اتصال</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="#" class="hover:underline">ارسل لنا مراسلاتك عبر البريد الإلكتروني هنا</a></li>
-          <li><a href="#" class="hover:underline">اتصل بنا اليوم</a></li>
-          <li><a href="#" class="hover:underline">قم بزيارة مدونتنا</a></li>
-          <li><a href="#" class="hover:underline">استكشف خدماتنا</a></li>
-          <li><a href="#" class="hover:underline">انضم إلى مجتمعنا</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3">وسائل التواصل الاجتماعي</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="#" class="hover:underline">تغذية تويتر</a></li>
-          <li><a href="#" class="hover:underline">LinkedIn ملف تعريف</a></li>
-          <li><a href="#" class="hover:underline">Instagram صفحة</a></li>
-          <li><a href="#" class="hover:underline">Dribbble عرض</a></li>
-          <li><a href="#" class="hover:underline">قناة يوتيوب</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-bold mb-3">معلومات عنا</h4>
-        <ul class="space-y-2 text-gray-600 text-sm">
-          <li><a href="#" class="hover:underline">الصفحة الرئيسية</a></li>
-          <li><a href="#" class="hover:underline">خدماتنا</a></li>
-          <li><a href="#" class="hover:underline">رؤى العملاء</a></li>
-          <li><a href="#" class="hover:underline">لوحة معلومات المستخدم</a></li>
-          <li><a href="#" class="hover:underline">مركز الدعم</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto mt-10 border-t border-gray-300 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      
-      <div class="flex gap-4 text-gray-500">
-        <a href="#" aria-label="LinkedIn" class="hover:text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.06-2.065 2.062 2.062 0 012.06-2.066c1.139 0 2.064.927 2.064 2.066 0 1.138-.925 2.065-2.064 2.065zM6.814 20.452H3.861V9h2.953v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
-        <a href="#" aria-label="Instagram" class="hover:text-pink-500"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.316.975.975 1.254 2.242 1.316 3.608.058 1.266.069 1.646.069 4.843s-.011 3.577-.069 4.843c-.062 1.366-.341 2.633-1.316 3.608-.975.975-2.242 1.254-3.608 1.316-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.341-3.608-1.316-.975-.975-1.254-2.242-1.316-3.608C2.175 15.577 2.163 15.197 2.163 12s.012-3.577.07-4.843c.062-1.366.341-2.633 1.316-3.608.975-.976 2.242-1.254 3.608-1.316C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.773.13 4.667.425 3.76 1.332 2.853 2.239 2.558 3.345 2.5 4.624.014 5.904 0 6.313 0 12c0 5.688.014 6.097.072 7.377.058 1.279.353 2.385 1.26 3.292.907.907 2.013 1.202 3.292 1.26C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.279-.058 2.385-.353 3.292-1.26.907-.907 1.202-2.013 1.26-3.292.058-1.28.072-1.689.072-7.377 0-5.687-.014-6.096-.072-7.376-.058-1.279-.353-2.385-1.26-3.292C19.333.425 18.227.13 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg></a>
-        <a href="#" aria-label="Facebook" class="hover:text-blue-700"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M22.676 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.676 0"/></svg></a>
-        <a href="#" aria-label="Twitter" class="hover:text-sky-500"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6"><path d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.384 4.482A13.944 13.944 0 011.671 3.149a4.916 4.916 0 001.523 6.556A4.897 4.897 0 01.964 9.1v.062a4.917 4.917 0 003.946 4.816 4.902 4.902 0 01-2.212.084 4.918 4.918 0 004.588 3.417A9.867 9.867 0 010 19.54 13.94 13.94 0 007.548 22c9.056 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"/></svg></a>
-      </div>
-
+      .font-dubai {
+        font-family: var(--font-dubai);
+      }
+      .font-amiri {
+        font-family: var(--font-amiri);
+      }
+      .font-cairo {
+        font-family: var(--font-cairo);
+      }
+      .font-kufi {
+        font-family: var(--font-kufi);
+      }
+    </style>
+  </head>
+  <body class="font-[calibri] bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav
+      class="w-full py-4 px-6 flex justify-around items-center text-sm border-b bg-white"
+      dir="rtl"
+      id="top"
+    >
+      <!-- Right: Logo -->
       <div class="flex items-center gap-2">
-        <img src="./assets/msariiLogo.png" alt="Msarii" class="h-8 w-auto"/>
-        <span class="text-gray-600 text-sm">© جميع الحقوق محفوظة - msarii.ai 2025</span>
+        <img src="./assets/msariiLogo.png" alt="شعار" class="h-10 w-auto" />
       </div>
-    </div>
-  </footer>
 
+      <!-- Center: Links -->
+      <div class="hidden md:flex gap-8 text-gray-700 font-medium text-xl">
+        <a
+          href="#top"
+          class="text-blue-600 border-b-2 border-blue-600 pb-1 font-tajawal"
+          >الصفحة الرئيسية</a
+        >
+        <a href="#services" class="hover:underline font-tajawal">خدماتنا</a>
+        <a href="#success-stories" class="hover:underline font-tajawal"
+          >قصص النجاح</a
+        >
 
-<script>
-function submitContact(e) { e.preventDefault(); document.getElementById('formStatus')?.classList?.remove('hidden'); return false; }
-</script>
-</body>
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="hover:underline font-dubai">
+            المزيد من الروابط ▾
+          </button>
+          <div
+            class="absolute hidden group-hover:block bg-white border text-right p-2 mt-2 rounded shadow"
+          >
+            <a href="#about" class="block px-3 py-1 hover:bg-gray-100"
+              >من نحن</a
+            >
+            <a href="#contact" class="block px-3 py-1 hover:bg-gray-100"
+              >اتصل بنا</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Left: Actions -->
+      <div class="flex items-center gap-6 font-medium">
+        <span
+          class="cursor-pointer hover:underline text-xl font-normal font-tajawal"
+          >إنجليزي</span
+        >
+        <a
+          href="#login"
+          class="hover:underline text-xl font-normal font-tajawal"
+          >تسجيل الدخول</a
+        >
+        <a href="#signup">
+          <button
+            class="bg-blue-700 text-white rounded-full px-4 py-1 text-xl font-normal font-tajawal"
+          >
+            اشتراك
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- BannerHero -->
+    <section
+      class="w-full text-white relative overflow-hidden"
+      dir="rtl"
+      style="
+        background-image: url('/assets/Rectangle 5235.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 600px;
+      "
+    >
+      <!-- Overlay (تدرّج شفاف) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-transparent to-[#002a6d]/40 z-0"
+      ></div>
+
+      <!-- Content wrapper -->
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between relative z-10 min-h-[600px] py-10 lg:py-0"
+      >
+        <!-- Right: Text -->
+        <div class="lg:w-1/2 w-full text-center lg:text-right space-y-8">
+          <h1 class="text-3xl md:text-5xl font-medium leading-tight">
+            تمكين المبدعين من<br />
+            خلال البرمجة والتصميم والذكاء
+          </h1>
+          <p
+            class="text-lg md:text-xl text-gray-200 leading-relaxed max-w-lg lg:ml-auto"
+          >
+            إبن أسرع، صمم أفضل، وابدأ مع Msarii.ai. منصتنا تجمع بين أحدث
+            التقنيات والأدوات الإبداعية للارتقاء بمشاريعك.
+          </p>
+          <div>
+            <a href="#contact" class="inline-block">
+              <button
+                class="bg-white text-[#002a6d] font-medium px-8 py-3 rounded-full hover:bg-gray-100 transition-colors duration-300 text-lg"
+              >
+                اتصل بنا
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Left: Image (قريبة من الأسفل) -->
+        <div class="flex items-end justify-center h-full">
+          <img
+            src="/assets/ChatGPT_Image.png"
+            alt="Msarii Hero"
+            class="object-contain h-[500px] md:h-[600px] w-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+
+    <section
+      id="services"
+      class="bg-white p-8 sm:p-12 font-sans antialiased text-right"
+      style="direction: rtl"
+    >
+      <!-- Title & Description -->
+      <div class="text-center mb-12">
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-4 font-cairo"
+        >
+          خدماتنا
+        </h2>
+        <p
+          class="max-w-3xl mx-auto leading-relaxed text-lg font-kufi"
+          style="color: #0a2b5a"
+        >
+          نحن نقدم تصميماً لواجهة المستخدم وتجربة المستخدم وحلولاً متكاملة وحلول
+          الذكاء الاصطناعي في الدعم والأتمتة المخصصة. نقوم بتصميم تجارب رقمية
+          سلسة، وتبسيط العمليات وتقديم خيارات قابلة للتوسع تعتمد على البيانات
+          لتعزيز أداء الأعمال.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/brain.gif"
+              alt="خدمات سحابية"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            خدمات سحابية قابلة للتطوير
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            بنية سحابية آمنة وقابلة للتوسع للتخزين، الحوسبة، النسخ الاحتياطي،
+            والنشر السريع لدعم نمو الأعمال والتحول الرقمي.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/Ai.gif"
+              alt="الذكاء الاصطناعي"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            الذكاء الاصطناعي
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            حلول AI متطورة لأتمتة العمليات، دعم اتخاذ القرار، رفع الكفاءة، ودفع
+            الابتكار عبر مختلف القطاعات.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/database.gif"
+              alt="تصميم الموقع"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            تصميم الموقع
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            مواقع حديثة ومتجاوبة تُبرز هويتك وتحسّن تجربة المستخدم وتزيد التفاعل
+            وتحوّل الزوار إلى عملاء.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/responsive.gif"
+              alt="أتمتة الذكاء الاصطناعي"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            أتمتة الذكاء الاصطناعي
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            أتمتة ذكية تُسرّع سير العمل، تقلل الجهد اليدوي، ترفع الدقة وتزيد
+            الإنتاجية مع قرارات أكثر ذكاءً.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/robot.gif"
+              alt="تصميم UI/UX"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            تصميم UI/UX
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            واجهات جذابة ومتمحورة حول المستخدم لتحسين القابلية والاكتشاف ورفع
+            التجربة الرقمية بسلاسة.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="group flex flex-col items-start text-right p-8 bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2"
+        >
+          <div
+            class="flex items-center justify-center p-6 mb-6 rounded-full bg-blue-50 w-24 h-24 transition-all duration-300 ease-in-out group-hover:bg-blue-100 group-hover:scale-110"
+          >
+            <img
+              src="./assets/ux-design.gif"
+              alt="DevOps والأتمتة"
+              class="w-12 h-12 transition-all duration-300 ease-in-out group-hover:rotate-12"
+            />
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 font-amiri">
+            DevOps والأتمتة
+          </h3>
+          <p
+            class="leading-relaxed text-lg font-normal font-kufi"
+            style="color: #0a2b5a"
+          >
+            تبسيط عمليات DevOps وCI/CD لدمج التطوير والعمليات، تقليل الأخطاء،
+            وتعزيز الكفاءة وقابلية التوسع.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CEO -->
+    <section class="bg-white py-20 px-4">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-12"
+      >
+        <div
+          class="flex-shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden border-4 border-white shadow-lg"
+        >
+          <img
+            src="./assets/girl3DImage.png"
+            alt="جاسم الدرمكي"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="text-center md:text-right flex-1 font-dubai">
+          <h2
+            class="text-2xl md:text-3xl font-bold text-[#002a6d] leading-relaxed mb-4"
+          >
+            تقدم
+            <span class="text-[#002a6d] font-extrabold">Msarii.ai</span> حلولاً
+            عالية الجودة<br />باستخدام أحدث التقنيات.
+          </h2>
+          <div class="mt-6">
+            <p class="text-lg font-bold text-[#002a6d]">جاسم الدرمكي</p>
+            <p class="text-sm text-[#002a6d]">CEO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternating Sections (عملية عملنا) -->
+
+    <section
+      id="process"
+      class="bg-[#F3F6FD] py-10 px-4 font-sans antialiased"
+      style="direction: rtl"
+    >
+      <!-- Title -->
+      <div class="text-center mb-12">
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-4 font-cairo"
+        >
+          عملية عملنا
+        </h2>
+      </div>
+
+      <!-- Steps wrapper -->
+      <div class="max-w-6xl mx-auto space-y-10">
+        <!-- Step -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 my-8 px-4 sm:px-8 lg:px-12 even:lg:flex-row-reverse"
+        >
+          <!-- Text -->
+          <div class="flex-1 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4 font-amiri">
+              تحليل المتطلبات
+            </h3>
+            <p
+              class="text-gray-700 leading-relaxed text-sm lg:text-xl font-kufi"
+            >
+              في هذه المرحلة الأولية، نتعاون بشكل وثيق مع عملائنا لفهم أهداف
+              الأعمال والمستخدمين المستهدفين ونطاق المشروع. نجمع ونوثق المتطلبات
+              التفصيلية عبر الاجتماعات والاستبيانات والأبحاث لضمان التوافق وكشف
+              التحديات مبكرًا.
+            </p>
+          </div>
+          <!-- Image -->
+          <div
+            class="w-full max-w-md lg:max-w-sm h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="./assets/Rectangle 5247.png"
+              alt="تحليل المتطلبات"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 my-8 px-4 sm:px-8 lg:px-12 even:lg:flex-row-reverse"
+        >
+          <div class="flex-1 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4 font-amيري">
+              تصميم UI/UX
+            </h3>
+            <p
+              class="text-gray-700 leading-relaxed text-sm lg:text-xl font-kufi"
+            >
+              نقوم بتصميم واجهة مستخدم وتجربة مستخدم سهلة الاستخدام وجذابة
+              بصريًا، مع التركيز على الاتساق بالمعلومات ورفع مستوى التجربة
+              الرقمية بسلاسة.
+            </p>
+          </div>
+          <div
+            class="w-full max-w-md lg:max-w-sm h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="./assets/Rectangle 5248.png"
+              alt="تصميم UI/UX"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 my-8 px-4 sm:px-8 lg:px-12 even:lg:flex-row-reverse"
+        >
+          <div class="flex-1 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4 font-amiri">
+              تطوير
+            </h3>
+            <p
+              class="text-gray-700 leading-relaxed text-sm lg:text-xl font-kufi"
+            >
+              يحوّل فريقنا التصاميم إلى حلول عملية عالية الأداء باستخدام أحدث
+              التقنيات ومنهجيات مرنة، مع اختبارات ودمج آمن مع الأنظمة الخلفية
+              لإخراج منتجات قابلة للتوسع والصيانة.
+            </p>
+          </div>
+          <div
+            class="w-full max-w-md lg:max-w-sm h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="./assets/Rectangle 5246.png"
+              alt="تطوير"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Step -->
+        <div
+          class="flex flex-col lg:flex-row items-center gap-8 my-8 px-4 sm:px-8 lg:px-12 even:lg:flex-row-reverse"
+        >
+          <div class="flex-1 text-center lg:text-right">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4 font-amiri">
+              النشر
+            </h3>
+            <p
+              class="text-gray-700 leading-relaxed text-sm lg:text-xl font-kufi"
+            >
+              نجهّز المنتج للإطلاق عبر تهيئة الخوادم وتحسين الأداء وفحوصات
+              الجودة النهائية، ونضمن طرحًا سلسًا ومراقبة لصيقة بعد الإطلاق
+              لمعالجة أي مشكلات بسرعة.
+            </p>
+          </div>
+          <div
+            class="w-full max-w-md lg:max-w-sm h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src="./assets/Rectangle 5249.png"
+              alt="النشر"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Carousel (حلولنا التقنية / مشاريعنا) -->
+    <section
+      class="w-full bg-white text-gray-800 relative overflow-hidden py-16"
+      dir="rtl"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="w-full text-center space-y-2 mb-8">
+          <h1
+            id="carouselTitle"
+            class="text-4xl md:text-5xl font-bold text-gray-800 font-cairo"
+          >
+            مشاريعنا
+          </h1>
+          <p
+            id="carouselSubtitle"
+            class="text-lg md:text-xl text-gray-600 font-kufi"
+          >
+            أفضل مطوري مواقع الويب تصميمات حصرية
+          </p>
+        </div>
+
+        <div id="carouselRoot" class="relative overflow-hidden group">
+          <div
+            id="carouselTrack"
+            dir="ltr"
+            class="flex transition-transform duration-500 ease-out"
+          >
+            <!-- Slide 1 -->
+            <div class="shrink-0 w-full flex items-center justify-center">
+              <img
+                src="/assets/destop.png"
+                alt="مشاريعنا"
+                class="object-contain w-full max-w-3xl rounded-2xl"
+                loading="lazy"
+                onerror="this.src='/assets/placeholder.png'"
+              />
+            </div>
+            <!-- Slide 2 -->
+            <div class="shrink-0 w-full flex items-center justify-center">
+              <img
+                src="/assets/Lurnify.png"
+                alt="حلولنا التقنية"
+                class="object-contain w-full max-w-3xl rounded-2xl"
+                loading="lazy"
+                onerror="this.src='/assets/placeholder.png'"
+              />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="btnPrev"
+            class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-300 text-gray-700 absolute right-2 top-1/2 -translate-y-1/2 z-20 shadow-md"
+            aria-label="Prev"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            id="btnNext"
+            class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-300 text-gray-700 absolute left-2 top-1/2 -translate-y-1/2 z-20 shadow-md"
+            aria-label="Next"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="dotsWrap"
+          class="flex items-center justify-center gap-3 mt-8"
+        ></div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const slidesData = [
+          {
+            title: "مشاريعنا",
+            subtitle: "أفضل مطوري مواقع الويب تصميمات حصرية",
+          },
+          { title: "حلولنا التقنية", subtitle: "تصميمات مبتكرة لمستقبل رقمي" },
+        ];
+
+        const track = document.getElementById("carouselTrack");
+        const root = document.getElementById("carouselRoot");
+        const titleEl = document.getElementById("carouselTitle");
+        const subtitleEl = document.getElementById("carouselSubtitle");
+        const btnPrev = document.getElementById("btnPrev");
+        const btnNext = document.getElementById("btnNext");
+        const dotsWrap = document.getElementById("dotsWrap");
+
+        let current = 0;
+        let isTransitioning = false;
+        let autoTimer = null;
+        const AUTO_MS = 5000;
+        const slides = Array.from(track.children);
+        const total = slides.length;
+
+        // Ensure each slide is exactly the viewport width of the carousel
+        function sizeSlides() {
+          const w = root.clientWidth;
+          slides.forEach((s) => {
+            s.style.width = w + "px";
+          });
+        }
+        const isRTL = getComputedStyle(root).direction === "rtl";
+
+        function applyTransform() {
+          const offset = root.clientWidth * current;
+          track.style.transform = `translateX(${isRTL ? offset : -offset}px)`;
+        }
+
+        function buildDots() {
+          dotsWrap.innerHTML = "";
+          for (let i = 0; i < total; i++) {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.className =
+              "w-3 h-3 rounded-full transition-all duration-300 " +
+              (i === 0
+                ? "bg-blue-600 scale-125"
+                : "bg-gray-400 hover:bg-gray-500");
+            b.setAttribute("aria-label", "Slide " + (i + 1));
+            b.addEventListener("click", () => goTo(i));
+            dotsWrap.appendChild(b);
+          }
+        }
+
+        function applyTransform() {
+          const offset = root.clientWidth * current; // move exactly one slide per step
+          track.style.transform = `translateX(-${offset}px)`;
+        }
+
+        function updateUI() {
+          applyTransform();
+
+          const meta = slidesData[current] ||
+            slidesData[0] || { title: "", subtitle: "" };
+          if (titleEl) titleEl.textContent = meta.title || "";
+          if (subtitleEl) subtitleEl.textContent = meta.subtitle || "";
+
+          const dots = Array.from(dotsWrap.children);
+          dots.forEach((d, i) => {
+            d.classList.toggle("bg-blue-600", i === current);
+            d.classList.toggle("scale-125", i === current);
+            d.classList.toggle("bg-gray-400", i !== current);
+          });
+        }
+
+        function goTo(index) {
+          if (isTransitioning) return;
+          current = (index + total) % total;
+          isTransitioning = true;
+          updateUI();
+          setTimeout(() => {
+            isTransitioning = false;
+          }, 500);
+        }
+
+        function next() {
+          goTo(current + 1);
+        }
+        function prev() {
+          goTo(current - 1);
+        }
+
+        function startAuto() {
+          stopAuto();
+          autoTimer = setInterval(() => {
+            if (!isTransitioning) next();
+          }, AUTO_MS);
+        }
+        function stopAuto() {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = null;
+        }
+
+        if (btnNext) btnNext.addEventListener("click", next);
+        if (btnPrev) btnPrev.addEventListener("click", prev);
+
+        root.addEventListener("mouseenter", stopAuto);
+        root.addEventListener("mouseleave", startAuto);
+
+        let startX = null;
+        root.addEventListener(
+          "touchstart",
+          (e) => {
+            startX = e.touches[0].clientX;
+          },
+          { passive: true }
+        );
+        root.addEventListener(
+          "touchend",
+          (e) => {
+            if (startX == null) return;
+            const dx = (e.changedTouches[0]?.clientX ?? startX) - startX;
+            if (Math.abs(dx) > 50) {
+              dx < 0 ? next() : prev();
+            }
+            startX = null;
+          },
+          { passive: true }
+        );
+
+        // Handle resize so slide widths and transform stay correct
+        window.addEventListener("resize", () => {
+          sizeSlides();
+          applyTransform();
+        });
+
+        // 🔎 Helpful: preload any slide images to avoid lazy + transform quirks
+        slides.forEach((slide) => {
+          const img = slide.querySelector("img");
+          if (img && img.src) {
+            new Image().src = img.src;
+          }
+        });
+
+        sizeSlides();
+        buildDots();
+        updateUI();
+        startAuto();
+      })();
+    </script>
+
+    <!-- Testimonials -->
+    <section class="w-full bg-white text-gray-800 py-16 px-6" dir="rtl">
+      <div class="max-w-6xl mx-auto">
+        <!-- العنوان -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-[#19478e] mb-4 font-cairo"
+          >
+            شهادات العملاء
+          </h2>
+          <p class="text-lg text-gray-600 font-kufi">
+            اسمع كيف أن واجهة المستخدم UX البديهية والتجربة المتكاملة وتطبيقات
+            الويب عالية الأداء ساعدت على تبسيط سير العمل وتسريع النمو.
+          </p>
+        </div>
+
+        <!-- الشبكة -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- بطاقة 1 -->
+          <div
+            class="bg-gradient-to-b from-[#DCE7FF] to-[#F5F7FD] rounded-3xl p-6 shadow-lg flex flex-col justify-between"
+          >
+            <!-- النجوم (5/5) -->
+            <div
+              class="flex justify-center md:justify-start space-x-reverse space-x-1"
+              aria-label="تقييم 5 من 5"
+            >
+              <!-- كرّر النجمة 5 مرات -->
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+            </div>
+            <!-- النص -->
+            <p class="mt-4 text-gray-700 leading-relaxed font-kufi">
+              أحدث تطبيق الويب أورة في سير التطوير قمنا به من خلال تقديم تصميمات
+              رائعة والميزات البديهية المصممة لتلبية احتياجاتنا.
+            </p>
+            <!-- الاسم/الدور -->
+            <div class="flex items-center justify-between mt-6">
+              <div class="text-right">
+                <p class="text-[#19478e] font-semibold text-lg font-tajawal">
+                  صوفيا
+                </p>
+                <p class="text-gray-600 text-sm font-tajawal">مدرب</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- بطاقة 2 -->
+          <div
+            class="bg-gradient-to-b from-[#DCE7FF] to-[#F5F7FD] rounded-3xl p-6 shadow-lg flex flex-col justify-between"
+          >
+            <!-- النجوم (5/5) -->
+            <div
+              class="flex justify-center md:justify-start space-x-reverse space-x-1"
+              aria-label="تقييم 5 من 5"
+            >
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+            </div>
+            <p class="mt-4 text-gray-700 leading-relaxed font-kufi">
+              لقد دهشت من الواجهة البديهية والتنقل السلس للمنصة.
+            </p>
+            <div class="flex items-center justify-between mt-6">
+              <div class="text-right">
+                <p class="text-[#19478e] font-semibold text-lg font-tajawal">
+                  عليا روي
+                </p>
+                <p class="text-gray-600 text-sm font-tajawal">
+                  خالق وسائل التواصل الاجتماعي
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- بطاقة 3 -->
+          <div
+            class="bg-gradient-to-b from-[#DCE7FF] to-[#F5F7FD] rounded-3xl p-6 shadow-lg flex flex-col justify-between"
+          >
+            <!-- النجوم (4/5) -->
+            <div
+              class="flex justify-center md:justify-start space-x-reverse space-x-1"
+              aria-label="تقييم 4 من 5"
+            >
+              <!-- 4 ممتلئة -->
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <svg
+                class="w-5 h-5 text-[#19478e]"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+              <!-- نجمة فارغة -->
+              <svg
+                class="w-5 h-5 text-gray-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.049 2.927a1 1 0 0 1 1.902 0l1.176 3.61a1 1 0 0 0 .95.69h3.818a1 1 0 0 1 .588 1.81l-3.09 2.247a1 1 0 0 0-.364 1.118l1.176 3.61a1 1 0 0 1-1.54 1.118L10.675 14.9a1 1 0 0 0-1.175 0L6.41 17.13a1 1 0 0 1-1.54-1.118l1.176-3.61a1 1 0 0 0-.364-1.118L2.592 9.037a1 1 0 0 1 .588-1.81H7a1 1 0 0 0 .95-.69l1.099-3.61Z"
+                />
+              </svg>
+            </div>
+            <p class="mt-4 text-gray-700 leading-relaxed font-kufi">
+              فريق تطوير كامل يدمج الواجهات الأمامية والخلفية والخدمات بسلاسة.
+            </p>
+            <div class="flex items-center justify-between mt-6">
+              <div class="text-right">
+                <p class="text-[#19478e] font-semibold text-lg font-tajawal">
+                  محمد علي
+                </p>
+                <p class="text-gray-600 text-sm font-tajawal">المؤسس والمعلم</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+
+    <!-- Contact Section (Non-React) -->
+    <section id="contact" class="bg-[#F3F6FD] py-12 px-4" dir="rtl">
+      <div
+        class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-7xl mx-auto"
+      >
+        <!-- صورة ومقدمة -->
+        <div class="flex flex-col items-center text-right">
+          <p class="text-sm text-gray-700 font-semibold mb-1 font-kufi">
+            !24/7 نحن متاحون لك
+          </p>
+          <h3 class="text-xl font-bold text-[#003B95] mb-4 font-kufi">
+            اتصل بنا
+          </h3>
+          <img
+            src="/assets/girl3DImage.png"
+            alt="Support"
+            class="w-full max-w-sm object-cover rounded-3xl"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- بطاقة النموذج -->
+        <div
+          class="relative w-full max-w-xl rounded-2xl shadow-xl px-6 py-8 sm:p-10 overflow-hidden"
+          style="
+            background-image: url('/assets/Rectangle 5235.png');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <!-- طبقة شفافية لزيادة التباين -->
+          <div class="absolute inset-0 bg-[#001b4a]/50"></div>
+
+          <div class="relative z-10">
+            <h2 class="text-white text-3xl font-extrabold mb-2 text-center">
+              أرسل استفسارك
+            </h2>
+            <p class="text-gray-200 text-center mb-6">سوف يسعدنا مساعدتك</p>
+
+            <!-- رسالة النجاح (تظهر بعد الإرسال) -->
+            <div
+              id="contactSuccess"
+              class="hidden mb-4 p-4 text-center text-green-100 bg-green-600 rounded-lg"
+            >
+              شكراً لك! لقد تم إرسال رسالتك بنجاح.
+            </div>
+
+            <form
+              id="contactForm"
+              class="space-y-4 text-white text-sm font-medium"
+              onsubmit="return submitContact(event)"
+            >
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="اسمك"
+                  required
+                  class="bg-transparent border border-white/80 focus:border-white text-white placeholder-white px-4 py-2 rounded-md outline-none"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="بريدك الإلكتروني"
+                  required
+                  class="bg-transparent border border-white/80 focus:border-white text-white placeholder-white px-4 py-2 rounded-md outline-none"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="هاتف"
+                  class="bg-transparent border border-white/80 focus:border-white text-white placeholder-white px-4 py-2 rounded-md outline-none"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="موضوع"
+                  class="bg-transparent border border-white/80 focus:border-white text-white placeholder-white px-4 py-2 rounded-md outline-none"
+                />
+              </div>
+
+              <textarea
+                name="message"
+                placeholder="رسالة"
+                rows="4"
+                required
+                class="bg-transparent border border-white/80 focus:border-white text-white placeholder-white px-4 py-2 rounded-md outline-none min-h-[120px] w-full"
+              ></textarea>
+
+              <div class="flex items-center gap-2">
+                <input
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                  class="accent-blue-500 w-4 h-4"
+                  required
+                />
+                <label for="terms" class="text-white text-sm"
+                  >أوافق على الشروط</label
+                >
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-white text-[#003B95] font-bold py-2 rounded-lg hover:bg-gray-100 transition"
+              >
+                تقدم
+              </button>
+            </form>
+
+            <!-- معلومات تواصل -->
+            <div
+              class="mt-6 pt-4 border-t border-white/60 flex flex-col sm:flex-row justify-between items-center text-white text-sm gap-3"
+            >
+              <div class="flex items-center gap-2">
+                <!-- أيقونة هاتف -->
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 3a1 1 0 0 1 1-1h2.153a1 1 0 0 1 .986.836l.74 3.698a1 1 0 0 1-.158.906L6.18 9.018a12.025 12.025 0 0 0 5.155 5.155l1.54-1.54a1 1 0 0 1 .907-.158l3.698.74a1 1 0 0 1 .836.986V17a1 1 0 0 1-1 1h-2C7.373 18 2 12.627 2 6V3z"
+                  />
+                </svg>
+                +971 52 352 36 72
+              </div>
+              <div class="flex items-center gap-2">
+                <!-- أيقونة بريد -->
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"
+                  />
+                  <path
+                    d="M18 8.118l-8 4-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"
+                  />
+                </svg>
+                support@msarii.ai
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function submitContact(e) {
+        e.preventDefault();
+
+        const form = document.getElementById("contactForm");
+        const success = document.getElementById("contactSuccess");
+
+        // تحقّق من الموافقة على الشروط
+        const terms = form.querySelector('input[name="terms"]');
+        if (!terms.checked) {
+          alert("يرجى الموافقة على الشروط أولاً.");
+          return false;
+        }
+
+        // (اختياري) هنا ترسل البيانات إلى خادمك عبر fetch:
+        // fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+
+        // إظهار رسالة النجاح وتفريغ الحقول
+        success.classList.remove("hidden");
+        form.reset();
+
+        // إخفاء الرسالة بعد 4 ثوانٍ (اختياري)
+        setTimeout(() => success.classList.add("hidden"), 4000);
+
+        return false; // منع إعادة التحميل
+      }
+    </script>
+
+    <!-- Footer -->
+
+    <footer
+      class="border-t bg-white pt-12 pb-6 text-sm text-gray-600"
+      dir="rtl"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-8">
+        <!-- الأعمدة -->
+        
+
+        <!-- الشريط السفلي -->
+        <div
+          class="pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-right"
+        >
+          <!-- الشعار وحقوق النشر -->
+          <div class="flex items-center gap-2">
+            <img src="/assets/msariiLogo.png" alt="Msarii" class="h-8 w-auto" />
+            <p class="text-xs text-gray-500">
+              © 2025 msarii.ai - جميع الحقوق محفوظة.
+            </p>
+          </div>
+
+          <!-- أيقونات السوشيال -->
+          <div class="flex gap-4 text-gray-500">
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              class="hover:text-blue-600 transition-colors"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.268 2.37 4.268 5.455v6.286zM5.337 7.433A2.062 2.062 0 113.277 5.37a2.062 2.062 0 012.06 2.063zM6.814 20.452H3.861V9h2.953v11.452z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="hover:text-pink-500 transition-colors"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.316.975.975 1.254 2.242 1.316 3.608.058 1.266.069 1.646.069 4.843s-.011 3.577-.069 4.843c-.062 1.366-.341 2.633-1.316 3.608-.975.975-2.242 1.254-3.608 1.316-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.341-3.608-1.316-.975-.975-1.254-2.242-1.316-3.608C2.175 15.577 2.163 15.197 2.163 12s.012-3.577.07-4.843c.062-1.366.341-2.633 1.316-3.608.975-.976 2.242-1.254 3.608-1.316C8.416 2.175 8.796 2.163 12 2.163zm0 3.675a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm6.406-.683a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"
+                />
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="hover:text-blue-700 transition-colors"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path
+                  d="M22.676 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.495v-9.294H9.691v-3.622h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.676 0"
+                />
+              </svg>
+            </a>
+            <!-- Twitter/X -->
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="hover:text-sky-500 transition-colors"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                <path
+                  d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 00-8.384 4.482A13.944 13.944 0 011.671 3.149a4.916 4.916 0 001.523 6.556A4.897 4.897 0 01.964 9.1v.062a4.917 4.917 0 003.946 4.816 4.902 4.902 0 01-2.212.084 4.918 4.918 0 004.588 3.417A9.867 9.867 0 010 19.54 13.94 13.94 0 007.548 22c9.056 0 14.01-7.496 14.01-13.986 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
